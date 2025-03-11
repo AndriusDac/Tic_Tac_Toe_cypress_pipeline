@@ -3,7 +3,7 @@ describe('Tic-Tac-Toe Game', () => {
 
   beforeEach(() => {
     cy.my_command("beforeEach", "Mondey");
-    cy.visit('http://localhost:5173/');
+    // cy.visit('http://localhost:5173/');
   });
 
   it('should display the initial game state', () => {
