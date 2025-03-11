@@ -1,7 +1,8 @@
 
-
 describe('Tic-Tac-Toe Game', () => {
+
   beforeEach(() => {
+    cy.my_command("beforeEach", "Mondey");
     cy.visit('http://localhost:5173/');
   });
 
@@ -34,45 +35,7 @@ describe('Tic-Tac-Toe Game', () => {
     cy.get('.reset').click();
     // cy.get('.game h2').should('contain', 'Next Player: X');
     cy.get('.board .square').should('be.empty');
+
+    cy.my_command("beforeEach", "Mondey");
   });
 });
-
-
-// describe('Tic-Tac-Toe Game', () => {
-//   beforeEach(() => {
-//     cy.visit('http://localhost:5173/');
-//   });
-
-//   it('should display the initial game state', () => {
-//     for (let i = 0; i < 9; i++) {
-//       cy.get(`[data-testid="square-${i}"]`).should('have.text', '');
-//     }
-//     cy.get('[data-testid="status"]').should('contain', 'Next Player: X');
-//   });
-
-//   it('should allow a player to make a move', () => {
-//     cy.get('[data-testid="square-0"]').click();
-//     cy.get('[data-testid="square-0"]').should('have.text', 'X');
-//     cy.get('[data-testid="status"]').should('contain', 'Next Player: O');
-//   });
-
-//   it('should determine the winner', () => {
-//     // X makes moves to win
-//     cy.get('[data-testid="square-0"]').click(); // X
-//     cy.get('[data-testid="square-3"]').click(); // O
-//     cy.get('[data-testid="square-1"]').click(); // X
-//     cy.get('[data-testid="square-4"]').click(); // O
-//     cy.get('[data-testid="square-2"]').click(); // X
-
-//     cy.get('[data-testid="status"]').should('contain', 'Winner: X');
-//   });
-
-//   it('should reset the game', () => {
-//     cy.get('[data-testid="square-0"]').click();
-//     cy.get('[data-testid="reset-button"]').click();
-//     for (let i = 0; i < 9; i++) {
-//       cy.get(`[data-testid="square-${i}"]`).should('have.text', '');
-//     }
-//     cy.get('[data-testid="status"]').should('contain', 'Next Player');
-//   });
-// });
