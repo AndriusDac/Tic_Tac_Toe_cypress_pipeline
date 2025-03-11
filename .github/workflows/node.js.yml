@@ -33,7 +33,7 @@ jobs:
     - name: Start React App in Backgruond
       run: npm dev &
       evn:
-        CI: true
+        CI: false
 
     - name: Wait for React App to be Ready
       run: npx wati-on http://localhost:5173   
