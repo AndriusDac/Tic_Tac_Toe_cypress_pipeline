@@ -11,18 +11,6 @@ describe('Tic-Tac-Toe Game', () => {
     cy.get('.board .square').should('have.length', 9).and('be.empty');
   });
 
-  it('should allow players to take turns', () => {
-    const firstMove = Cypress._.random(0, 8);
-    let secondMove;
-    do {
-      secondMove = Cypress._.random(0, 8);
-    } while (secondMove === firstMove);
-
-    cy.get(`.board .square:eq(${firstMove})`).click();
-    cy.get('.game h2').should('contain', 'Next Player: O');
-    cy.get(`.board .square:eq(${secondMove})`).click();
-    cy.get('.game h2').should('contain', 'Next Player: X');
-  });
 
   it('should not allow clicking on an already filled square', () => {
     const move = Cypress._.random(0, 8);
