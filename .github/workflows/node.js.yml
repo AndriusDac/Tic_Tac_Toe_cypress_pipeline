@@ -36,6 +36,6 @@ jobs:
         CI: true
 
     - name: Wait for React App to be Ready
-      run: npx wati-on http://localhost:5173   
+      run: npx wait-on http://localhost:5173/   
 
     - run: npx cypress run
