@@ -31,9 +31,9 @@ jobs:
       run: npm ci
 
     - name: Start React App in Backgruond
-      run: npm dev &
+      run: npm run dev &
       env:
-          CI: false
+          CI: false # Prevent React from treating warnings as errors
 
     - name: Wait for React App to be Ready
       run: npx wati-on http://localhost:5173   
