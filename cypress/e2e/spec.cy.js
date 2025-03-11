@@ -2,8 +2,8 @@
 describe('Tic-Tac-Toe Game', () => {
 
   beforeEach(() => {
-    cy.my_command("beforeEach", "Mondey");
-    // cy.visit('http://localhost:5173/');
+    // cy.my_command("beforeEach", "Mondey");
+    cy.visit('http://localhost:5173/');
   });
 
   it('should display the initial game state', () => {
@@ -36,6 +36,6 @@ describe('Tic-Tac-Toe Game', () => {
     // cy.get('.game h2').should('contain', 'Next Player: X');
     cy.get('.board .square').should('be.empty');
 
-    cy.my_command("beforeEach", "Mondey");
+    // cy.my_command("beforeEach", "Mondey");
   });
 });
