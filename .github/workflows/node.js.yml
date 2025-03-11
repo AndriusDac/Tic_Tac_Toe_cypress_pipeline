@@ -33,4 +33,4 @@ jobs:
     - name: Start React App in Backgruond
       run: npm dev &
 
-    - run: npm run cy:cli
+    - run: npx cypress run
