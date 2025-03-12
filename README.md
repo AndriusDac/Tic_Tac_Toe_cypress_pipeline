@@ -27,14 +27,14 @@ Make sure you have **Node.js** and **npm** installed.
 
 1. Clone the repository:
 
-   ``` bash
+   ```bash
    git clone https://github.com/username/tic-tac-toe.git
    cd tic-tac-toe
    ```
 
 2. Install dependencies:
 
-   ``` bash
+   ```bash
    npm install
    ```
 
@@ -42,7 +42,7 @@ Make sure you have **Node.js** and **npm** installed.
 
 Start the development server:
 
-``` bash
+```bash
 npm run dev
 ```
 
@@ -52,13 +52,12 @@ Open your browser and navigate to:
 http://localhost:5173/
 ```
 
-
 ### Running Tests
 
 This project uses **Cypress** for testing. To run the tests, use the following commands:
 
 1. Open the Cypress interface:
-   ``` bash
+   ```bash
    npx cypress open
    ```
 
@@ -66,9 +65,24 @@ This project uses **Cypress** for testing. To run the tests, use the following c
 
 Alternatively, you can run tests directly from the command line:
 
-``` bash
+```bash
 npx cypress run
 ```
+
+## Test Cases (TC)
+
+🔹 TC01: Verify that the game board is displayed with 9 clickable squares.  
+🔹 TC02: Verify that the "Reset" button is displayed.  
+🔹 TC03: Verify that the current player ("X" or "O") is displayed correctly.  
+🔹 TC04: Verify that clicking on an empty square marks it with the current player's symbol ("X" or "O").  
+🔹 TC05: Verify that clicking on an already marked square does not change its symbol.  
+🔹 TC06: Verify that the current player changes after a valid move.  
+🔹 TC07: Verify that the game detects a win when a player aligns three symbols horizontally, vertically, or diagonally.  
+🔹 TC08: Verify that the game displays the winning message and disables further moves after a win.  
+🔹 TC09: Verify that the game detects a draw when all squares are filled with no winner.  
+🔹 TC10: Verify that the game displays a draw message.  
+🔹 TC11: Verify that clicking the "Reset" button clears the board and starts a new game.  
+🔹 TC12: Verify that the current player is reset to "X" after clicking the "Reset" button.  
 
 ## Project Structure
 
@@ -82,17 +96,6 @@ npx cypress run
 ├── package.json
 └── README.md
 ```
-
-## How to Play
-
-1. Click on any empty square to place your mark (either **X** or **O**).
-2. Alternate turns between players.
-3. The game will announce the winner or a tie.
-4. Click the **Reset** button to start a new game.
-
-## License
-
-This project is licensed under the MIT License.
 
 ## Acknowledgments
 
