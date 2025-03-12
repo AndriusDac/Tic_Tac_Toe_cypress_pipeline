@@ -16,7 +16,7 @@ describe('Tic-Tac-Toe Game', () => {
   it('should not allow clicking on an already filled square', () => {
     const move = Cypress._.random(0, 8);
     cy.get(`.board .square:eq(${move})`).click().should('not.be.empty');
-    cy.get(`.board .square:eq(${move})`).click().should('not.be.empty');
+    cy.get(`.board .square:eq(${move})`).click().should("contain", "X");
   });
 
   it('should determine a winner', () => {
@@ -34,7 +34,7 @@ describe('Tic-Tac-Toe Game', () => {
     cy.get('.board .square:eq(0)').click();
     cy.get('.reset').click();
     // cy.get('.game h2').should('contain', 'Next Player: X');
-    cy.get('.board .square').should('be.empty');
+    cy.get('.board .square').should('have.length', 9).and('be.empty');
 
     // cy.my_command("beforeEach", "Mondey");
   });

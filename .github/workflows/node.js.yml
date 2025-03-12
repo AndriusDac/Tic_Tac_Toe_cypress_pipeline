@@ -33,7 +33,7 @@ jobs:
     - name: Start React App in Backgruond
       run: npm run dev &
       env:
-        CI: true
+          CI: true
 
     - name: Wait for React App to be Ready
       run: npx wait-on http://localhost:5173/   

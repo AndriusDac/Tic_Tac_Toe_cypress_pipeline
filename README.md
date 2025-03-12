@@ -27,14 +27,14 @@ Make sure you have **Node.js** and **npm** installed.
 
 1. Clone the repository:
 
-   ```bash
+   ``` bash
    git clone https://github.com/username/tic-tac-toe.git
    cd tic-tac-toe
    ```
 
 2. Install dependencies:
 
-   ```bash
+   ``` bash
    npm install
    ```
 
@@ -42,7 +42,7 @@ Make sure you have **Node.js** and **npm** installed.
 
 Start the development server:
 
-```bash
+``` bash
 npm run dev
 ```
 
@@ -52,13 +52,13 @@ Open your browser and navigate to:
 http://localhost:5173/
 ```
 
+
 ### Running Tests
 
 This project uses **Cypress** for testing. To run the tests, use the following commands:
 
 1. Open the Cypress interface:
-
-   ```bash
+   ``` bash
    npx cypress open
    ```
 
@@ -66,7 +66,7 @@ This project uses **Cypress** for testing. To run the tests, use the following c
 
 Alternatively, you can run tests directly from the command line:
 
-```bash
+``` bash
 npx cypress run
 ```
 
