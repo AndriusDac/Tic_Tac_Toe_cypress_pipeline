@@ -87,12 +87,13 @@ npx cypress run
 ## Project Structure
 
 ```
-├── src
+📁
+├──📁 src
 │   └── App.jsx     # Main React component
-├── cypress
-│   └── e2e
-│       └── tic-tac-toe.cy.js  # Cypress tests
-├── public
+├──📁 cypress
+│   └──📁 e2e
+│       └── spec.cy.js  # Cypress tests
+├──📁 public
 ├── package.json
 └── README.md
 ```
