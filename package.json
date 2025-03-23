@@ -11,7 +11,9 @@
     "cy:ui": "cypress open",
     "cy:cli": "cypress run",
     "test:e2e": "concurrently \"npm run dev\" \"npm run cy:ui\"",
-    "test:e2eh": "concurrently \"npm run dev\" \"npx wait-on http://localhost:5173 && npm run cy:cli\""
+    "test:e2eh": "concurrently \"npm run dev\" \"npx wait-on http://localhost:5173 && npm run cy:cli\"",
+    "unit": "concurrently \"npm run dev\" \"npx wait-on http://localhost:5173 && vitest\"",
+    "unit:watch": "concurrently \"npm run dev\" \"npx wait-on http://localhost:5173 && vitest --watch\""
   },
   "dependencies": {
     "react": "^19.0.0",
